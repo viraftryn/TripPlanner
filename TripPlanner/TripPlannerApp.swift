@@ -11,7 +11,15 @@ import SwiftUI
 struct TripPlannerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AvailabilityGate {
+                TabView {
+                    QuickChatView()
+                        .tabItem { Label("Ask", systemImage: "bubble.left.and.text.bubble.right") }
+
+                    TripPlannerView()
+                        .tabItem { Label("Plan", systemImage: "map") }
+                }
+            }
         }
     }
 }
