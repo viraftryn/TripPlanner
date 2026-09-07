@@ -7,6 +7,7 @@
 
 import FoundationModels
 
+@Generable
 enum TimeOfDay: Equatable {
     case morning
     case midday
